@@ -5,6 +5,9 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+<Target Name="pipelinePreDeployCopyAllFilesToOneFolder">
+  <Copy SourceFiles="@." DestinationFolder="\published\" />
+</Target>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
